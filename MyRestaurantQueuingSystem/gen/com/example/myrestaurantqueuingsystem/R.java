@@ -27,36 +27,42 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int bottom_bar=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int tab_address_normal=0x7f020002;
-        public static final int tab_address_pressed=0x7f020003;
-        public static final int tab_bg2=0x7f020004;
-        public static final int tab_find_frd_normal=0x7f020005;
-        public static final int tab_find_frd_pressed=0x7f020006;
-        public static final int tab_settings_normal=0x7f020007;
-        public static final int tab_settings_pressed=0x7f020008;
-        public static final int tab_weixin_normal=0x7f020009;
-        public static final int tab_weixin_pressed=0x7f02000a;
-        public static final int title_bar=0x7f02000b;
+        public static final int back=0x7f020000;
+        public static final int bottom_bar=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int tab_address_normal=0x7f020003;
+        public static final int tab_address_pressed=0x7f020004;
+        public static final int tab_bg2=0x7f020005;
+        public static final int tab_find_frd_normal=0x7f020006;
+        public static final int tab_find_frd_pressed=0x7f020007;
+        public static final int tab_settings_normal=0x7f020008;
+        public static final int tab_settings_pressed=0x7f020009;
+        public static final int tab_weixin_normal=0x7f02000a;
+        public static final int tab_weixin_pressed=0x7f02000b;
+        public static final int title_bar=0x7f02000c;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000f;
+        public static final int action_settings=0x7f090014;
         public static final int btn_tab_bottom_contact=0x7f090007;
         public static final int btn_tab_bottom_friend=0x7f090005;
         public static final int btn_tab_bottom_setting=0x7f090009;
         public static final int btn_tab_bottom_weixin=0x7f090003;
-        public static final int editText1=0x7f09000c;
-        public static final int editText2=0x7f09000e;
+        public static final int button1=0x7f090013;
+        public static final int et_login_email=0x7f09000f;
+        public static final int et_login_password=0x7f09000d;
+        public static final int et_login_phone=0x7f09000e;
+        public static final int et_login_user_name=0x7f09000c;
         public static final int id_content=0x7f090000;
         public static final int id_tab_bottom_contact=0x7f090006;
         public static final int id_tab_bottom_friend=0x7f090004;
         public static final int id_tab_bottom_setting=0x7f090008;
         public static final int id_tab_bottom_weixin=0x7f090002;
+        public static final int imageView1=0x7f09000b;
         public static final int ly_main_tab_bottom=0x7f090001;
         public static final int ly_main_weixin=0x7f09000a;
-        public static final int textView1=0x7f09000b;
-        public static final int textView2=0x7f09000d;
+        public static final int rb_login_man=0x7f090011;
+        public static final int rb_login_woman=0x7f090012;
+        public static final int rg_login_group=0x7f090010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -73,11 +79,16 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int email=0x7f060008;
         public static final int hello_world=0x7f060002;
         public static final int login=0x7f060004;
+        public static final int man=0x7f06000a;
         public static final int name=0x7f060005;
         public static final int password=0x7f060006;
+        public static final int phone=0x7f060007;
+        public static final int sex=0x7f060009;
         public static final int user_name=0x7f060003;
+        public static final int woman=0x7f06000b;
     }
     public static final class style {
         /** 

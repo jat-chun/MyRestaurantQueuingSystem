@@ -1,14 +1,26 @@
 package com.example.myrestaurantqueuingsystem;
 
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import com.example.myrestaurantqueuingsystem.util.HttpUtil;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
 
@@ -36,8 +48,39 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		
 		initViews();
+		MyTask task = new MyTask();
+		task.execute();
 		fragmentManager = getFragmentManager();
 		setTabSelection(0);
+	}
+	
+	class MyTask extends AsyncTask<String, Void, String>{
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			// TODO Auto-generated method stub
+			String result = null;
+			User user = new User();
+			user.setUserName("陈春杰7");
+			user.setAge(23);
+			user.setCreateTime(new Date(System.currentTimeMillis()));
+			user.setPhone("15088132300");
+			user.setPwd("123456");
+			user.setEmail("919700667@qq.com");
+			List<NameValuePair> list = new ArrayList<NameValuePair>();
+			NameValuePair nameValuePairs = new BasicNameValuePair("user", user.toString());
+			list.add(nameValuePairs);
+			try {
+				result = HttpUtil.httpPost(HttpUtil.BaseUrl+"user/login.do", list);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			Toast.makeText(MainActivity.this, result, 1).show();
+			
+			return result;
+		}
+		
 	}
 	private void initViews()
 	{
