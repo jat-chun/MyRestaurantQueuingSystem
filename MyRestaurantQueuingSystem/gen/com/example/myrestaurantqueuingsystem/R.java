@@ -43,11 +43,11 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f090014;
+        public static final int bt_login=0x7f090013;
         public static final int btn_tab_bottom_contact=0x7f090007;
         public static final int btn_tab_bottom_friend=0x7f090005;
         public static final int btn_tab_bottom_setting=0x7f090009;
         public static final int btn_tab_bottom_weixin=0x7f090003;
-        public static final int button1=0x7f090013;
         public static final int et_login_email=0x7f09000f;
         public static final int et_login_password=0x7f09000d;
         public static final int et_login_phone=0x7f09000e;
