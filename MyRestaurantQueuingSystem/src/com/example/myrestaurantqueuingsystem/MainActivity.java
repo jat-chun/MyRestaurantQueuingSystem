@@ -48,8 +48,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		
 		initViews();
-		MyTask task = new MyTask();
-		task.execute();
+//		MyTask task = new MyTask();
+//		task.execute();
 		fragmentManager = getFragmentManager();
 		setTabSelection(0);
 	}

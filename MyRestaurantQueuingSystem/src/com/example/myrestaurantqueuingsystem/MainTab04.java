@@ -1,5 +1,7 @@
 package com.example.myrestaurantqueuingsystem;
 
+import com.example.myrestaurantqueuingsystem.util.HttpUtil;
+
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.AsyncTask;
@@ -14,6 +16,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.Toast;
 
 @SuppressLint("NewApi")
 public class MainTab04 extends Fragment{
@@ -88,13 +91,24 @@ public class MainTab04 extends Fragment{
 		@Override
 		protected String doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
-			return null;
+			String result = null;
+			try {
+				if (email=="") {
+					email="null";
+				}
+				result = HttpUtil.httpGet(HttpUtil.Apply+"userName="+user_name+"?password="+password+"?phone="+phone+"?email="+email+"?sex="+sex);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return result;
 		}
 		
 		@Override
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
+			Toast.makeText(getActivity(), result, 1).show();
 		}
 		
 	}
